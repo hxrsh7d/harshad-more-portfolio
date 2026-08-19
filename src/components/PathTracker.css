@@ -1,0 +1,117 @@
+.path-tracker {
+  margin-top: clamp(40px, 7vw, 64px);
+  padding-top: clamp(28px, 4vw, 36px);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.path-tracker__label {
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.path-tracker__track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.path-tracker__node {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  padding-right: 28px;
+  margin-right: 28px;
+}
+
+.path-tracker__node:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 22px;
+  height: 1px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--border-strong) 0,
+    var(--border-strong) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  transform: translateY(-50%);
+}
+
+.path-tracker__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 2px solid var(--border-strong);
+  background: var(--bg-base);
+  flex-shrink: 0;
+}
+
+.path-tracker__text {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.path-tracker__node--done .path-tracker__dot {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.path-tracker__node--done .path-tracker__text {
+  color: var(--text-secondary);
+}
+
+.path-tracker__node--active .path-tracker__dot {
+  border-color: var(--accent-strong);
+  background: var(--bg-base);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  animation: path-pulse 2.2s ease-in-out infinite;
+}
+
+.path-tracker__node--active .path-tracker__text {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+@keyframes path-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+  50% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+}
+
+.path-tracker__node--seeking .path-tracker__dot {
+  border-color: var(--accent-2);
+  border-style: dashed;
+}
+
+.path-tracker__node--seeking .path-tracker__text {
+  color: var(--accent-2);
+}
+
+@media (max-width: 720px) {
+  .path-tracker__track {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .path-tracker__node {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .path-tracker__node:not(:last-child)::after {
+    display: none;
+  }
+}

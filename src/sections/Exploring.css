@@ -1,0 +1,28 @@
+.exploring__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.exploring__card {
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exploring__index {
+  color: var(--accent);
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.exploring__title {
+  font-size: 1.05rem;
+}
+
+.exploring__desc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}

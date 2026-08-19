@@ -1,0 +1,28 @@
+.resume__card {
+  padding: clamp(32px, 6vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+  background: var(--bg-surface-raised);
+}
+
+.resume__text h2 {
+  margin: 6px 0 8px;
+}
+
+.resume__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.resume__pending {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 0.85em 1.2em;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-sm);
+}

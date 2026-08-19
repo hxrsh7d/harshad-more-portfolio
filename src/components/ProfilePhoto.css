@@ -1,0 +1,82 @@
+.profile-photo {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 28px;
+  isolation: isolate;
+}
+
+.profile-photo--lg {
+  width: 280px;
+  height: 280px;
+}
+
+.profile-photo--sm {
+  width: 96px;
+  height: 96px;
+  border-radius: 18px;
+}
+
+.profile-photo__ring {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: var(--accent-gradient);
+  opacity: 0.55;
+  filter: blur(0.5px);
+  z-index: 0;
+}
+
+.profile-photo__img,
+.profile-photo__placeholder {
+  position: absolute;
+  inset: 3px;
+  border-radius: calc(28px - 3px);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.profile-photo--sm .profile-photo__img,
+.profile-photo--sm .profile-photo__placeholder {
+  border-radius: calc(18px - 3px);
+}
+
+.profile-photo__img {
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  object-fit: cover;
+  background: var(--bg-surface);
+}
+
+.profile-photo__placeholder {
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  background: var(--bg-surface-raised);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.profile-photo__placeholder span:first-child {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+}
+
+.profile-photo--sm .profile-photo__placeholder span:first-child {
+  font-size: 1.1rem;
+}
+
+.profile-photo__hint {
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.profile-photo--sm .profile-photo__hint {
+  display: none;
+}
