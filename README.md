@@ -4,6 +4,8 @@ Personal portfolio website for **Harshad More**, a Diploma in Artificial Intelli
 
 Live goal: recruiters, internship providers, colleges, and collaborators should immediately understand who Harshad is, what he's built, and how to reach him — without a single fabricated claim.
 
+View my portfolio:
+https://hxrsh7d.github.io/harshad-more-portfolio/
 ---
 
 ## 1. About the Portfolio
