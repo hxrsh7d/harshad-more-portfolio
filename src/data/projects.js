@@ -45,6 +45,26 @@ const projects = [
     status: "Completed",
     featured: true,
   },
+  {
+    title: "ChatUI",
+    description:
+      "A modern, self-hosted AI chat interface that connects local llama.cpp models, cloud AI providers, and custom OpenAI-compatible APIs through a unified provider-agnostic AI gateway.",
+    github: "https://github.com/hxrsh7d/ChatUI",
+    demo: "",
+    tags: [
+      "React",
+      "Vite",
+      "FastAPI",
+      "Python",
+      "TypeScript",
+      "llama.cpp",
+      "RAG",
+      "AI",
+    ],
+    image: "",
+    status: "Completed",
+    featured: true,
+  },
 ];
 
 export default projects;
