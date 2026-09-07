@@ -59,7 +59,7 @@ const portfolio = {
     quickFacts: [
       { label: "Years of Professional Experience", value: "0+" },
       { label: "Diploma", value: "AI & ML" },
-      { label: "Personal Projects", value: "1+" },
+      { label: "Personal Projects", value: "2+" },
       { label: "Focus Area", value: "AI-Powered Productivity" },
     ],
   },
